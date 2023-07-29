@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #1F7CE0;
+    font-family: 'Graphik Web Medium,sans-serif';
+}
+
+#main {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* NAVBAR CSS */
+#navbar {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px solid #dadada;
+}
+
+#navbar img {
+    height: 80%;
+    width: 20%;
+}
+
+#nav-box1 {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40vw;
+}
+
+#nav-box2 {
+    display: flex;
+    justify-content: space-between;
+    width: 15vw;
+}
+
+.loginbtn {
+    padding: 10px 20px;
+    color: white;
+    background-color: #1e79dacf;
+    border: none;
+    border-radius: 8px;
+    font-size: large;
+    cursor: pointer;
+}
+
+.startedbtn {
+    border: none;
+    background: none;
+    font-weight: 400;
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+
+/* CONTENT CSS */
+#contentbox {
+    height: calc(100% - 80px);
+    width: 100%;
+    display: flex;
+    padding: 5px 10px;
+}
+
+#content-box1 {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: end;
+    padding: 10px 13px;
+    align-items: flex-start;
+}
+
+#content-box1 img {
+    height: 30%;
+    width: 50%;
+    border: none;
+    border-radius: 10px;
+    margin-top: vh;
+    object-fit: cover;
+}
+
+#content-box2 {
+    height: 100%;
+    width: 55%;
+    color: black;
+    font-size: 100px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 120px;
+    padding: 20px 10px;
+}
+
+
+#content-box2 button {
+    font-size: 60px;
+    border: none;
+    background: none;
+}
+
+#content-box3 {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px 10px;
+}
+
+#content-box3 h1 {
+    font-size: 35px;
+    color: black;
+    text-align: center;
+}
+
+.horizon-1 {
+    display: flex;
+    width: 100%;
+    gap: 10%;
+    align-items: center;
+}
+
+.horizon-1 img {
+    width: 40%;
+}
+
+.data {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.horizon-1 h4 {
+    color: black;
+    font-size: 20px;
+    opacity: 0.7;
+}
