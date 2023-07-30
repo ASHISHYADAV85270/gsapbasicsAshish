@@ -19,12 +19,14 @@ document.querySelectorAll('.elem').forEach((elem, index) => {
         // console.log(elem.getBoundingClientRect().top, details.clientY);
         var rot_val = details.clientX - rotate;
         rotate = details.clientX;
+        gsap.to(elem.querySelector('h1'), { opacity: 0.3, scale: 1.2 })
+        gsap.to(elem.querySelector('h5'), { opacity: 0.3, scale: 1.5 })
+
         gsap.to(elem.querySelector('img'), {
             opacity: 1, ease: Power3,
             top: top_pos - "13vh",
             left: details.clientX,
             rotate: gsap.utils.clamp(-15, 15, rot_val)
-
         })
     })
 });
@@ -34,6 +36,8 @@ document.querySelectorAll('.elem').forEach((elem, index) => {
 
 document.querySelectorAll('.elem').forEach((elem, index) => {
     elem.addEventListener("mouseleave", function (details) {
+        gsap.to(elem.querySelector('h1'), { opacity: 0.8, scale: 1 })
+        gsap.to(elem.querySelector('h5'), { opacity: 0.3, scale: 1 })
 
         gsap.to(elem.querySelector('img'), {
             opacity: 0, ease: Power1,
@@ -64,14 +68,35 @@ tl.from("#navbar h1,.animationdiv h1, .animationdiv h5,.animationdiv h3", {
     ease: Expo.easeInOut
 })
 
-gsap.from("#herofooter a,.circle", {
+gsap.from(".animationdiv h1", {
+    duration: 3,
+    fontWeight: 300,
+    repeat: -1,
+    scale: 0.8,
+    yoyo: true,
+    ease: "power4.out"
+
+})
+
+tl.from("#herofooter a, .circle", {
     transform: "translateY(-50%)",
     duration: 3,
+    scale: 2,
+    stagger: 0.3,
+    ease: Power3,
     opacity: 0,
-    ease: Expo.easeInOut,
 })
 
 
+gsap.from("#aboutsection img", {
+    rotate: 360,
+    duration: 5,
+    scale: 1.5,
+    transform: "translateX(-206%)",
+    yoyo: true,
+    repeat: -1,
+    ease: "bounce.out",
+})
 
 function time() {
     var a = 0;

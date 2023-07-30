@@ -66,6 +66,11 @@ body {
     opacity: 0.9;
 }
 
+#navbar h1 a {
+    color: #ffff;
+    text-decoration: none;
+}
+
 #content {
     color: #ffff;
     margin-top: 4.7vw;
@@ -123,7 +128,6 @@ body {
 #herofooter a {
     color: white;
     opacity: 0.8;
-
     text-decoration: none;
 }
 
@@ -164,6 +168,7 @@ body {
     align-items: center;
     padding: 2vw 1vw;
     position: relative;
+
 }
 
 .elem img {
@@ -171,8 +176,9 @@ body {
     z-index: 999;
     height: 150%;
     width: 30vw;
-    object-fit: contain;
+    object-fit: cover;
     opacity: 0;
+    border-radius: 20px;
 }
 
 .elem h1 {
@@ -201,6 +207,7 @@ body {
     padding: 10vw 3vw;
     width: 100%;
     align-items: center;
+    position: relative;
 }
 
 .aboutdata {
