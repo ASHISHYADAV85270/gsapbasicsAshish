@@ -5,11 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+" rel="stylesheet">
+
     <link rel="stylesheet" href="./index.css">
     <title>Document</title>
 </head>
 
 <body>
+    <div id="minicircle"></div>
+    <div id="loader">
+        <h1>0%</h1>
+    </div>
     <div id="main">
         <div id="hero">
             <div id="navbar">
@@ -19,17 +27,29 @@
                 </h1>
             </div>
             <div id="content">
-                <h1>PRODUCT</h1>
-                <div id="chotacontent">
-                    <h1>DESIGNER</h1>
-                    <h5>BASED IN TORONTO</h5>
+                <div id="content-box1" class="animationdiv">
+                    <h1>PRODUCT</h1>
+                </div>
+                <div id="content-box2">
+                    <div class="animationdiv">
+                        <h1>DESIGNER</h1>
+                    </div>
+                    <div class="animationdiv">
+                        <h5>BASED IN TORONTO</h5>
+                    </div>
                 </div>
             </div>
             <div id="contentdata">
-                <h3> AVAILABLE FOR FREELANCE</h3>
-                <h3>WORK FROM MAY 23'</h3>
+                <div class="animationdiv">
+                    <h3> AVAILABLE FOR FREELANCE</h3>
+                </div>
+                <div class="animationdiv">
+                    <h3>WORK FROM MAY 23'</h3>
+                </div>
             </div>
-            <div id="footer">
+
+
+            <div id="herofooter">
                 <a href="#">
                     CURRENT LY WORKING AT YML <i class="ri-arrow-right-up-line"></i>
                 </a>
@@ -103,6 +123,12 @@
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
     <script src="./index.js"></script>
 </body>
 

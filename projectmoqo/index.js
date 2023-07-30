@@ -28,8 +28,7 @@ tl.to(".page1 h1", {
     scrollTrigger: {
         trigger: ".page1 ",
         scroller: "body",
-        // markers: true,
-        start: 'top top', //start setstart
+        start: 'top top',
         end: 'top -200% ',
         scrub: 3,
         pin: true
