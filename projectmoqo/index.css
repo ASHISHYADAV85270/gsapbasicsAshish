@@ -1,0 +1,66 @@
+@font-face {
+    font-family: head;
+    src: url(./Heading-Now-Variable.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100vh;
+    width: 100%;
+}
+
+.page1 {
+    height: 100%;
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+}
+
+.page1 h1 {
+    font-size: 40vw;
+    color: white;
+    text-transform: uppercase;
+    font-family: head;
+    white-space: nowrap;
+    /* isai text ek line mai hi aaiga */
+
+    font-stretch: 260%;
+    font-weight: 999;
+}
+
+.page2 {
+    height: 100%;
+    width: 100%;
+    background: #0000007c;
+}
+
+.page3 {
+    height: 100%;
+    width: 100%;
+    background: #000;
+}
+
+
+#loader {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(128, 128, 128);
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}

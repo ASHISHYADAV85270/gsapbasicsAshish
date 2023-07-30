@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    background: #1a191986;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    background: #110a0abc;
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background: black;
+}
