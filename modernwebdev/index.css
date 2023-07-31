@@ -46,7 +46,7 @@ body {
 #main {
     background: #000;
     width: 100%;
-    position: relative;
+    overflow: hidden;
 }
 
 
@@ -179,16 +179,23 @@ body {
     align-items: center;
     padding: 2vw 1vw;
     position: relative;
-
 }
 
-.elem img {
+.elem a {
     position: absolute;
-    z-index: 999;
+    cursor: pointer;
+    width: fit-content;
     height: 150%;
     width: 30vw;
-    object-fit: fill;
     opacity: 0;
+}
+
+.elem a img {
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    opacity: 1;
     border-radius: 20px;
 }
 
@@ -208,7 +215,7 @@ body {
     border-bottom: 0.1px solid #dadada58;
 }
 
-.elem img:hover {
+.elem a img:hover {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
     cursor: pointer;
@@ -319,7 +326,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0vw 3vw;
-    margin-bottom: 2vw;
+    margin-bottom: 1.4vw;
     width: 100%;
 }
 

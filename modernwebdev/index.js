@@ -1,3 +1,7 @@
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+});
 const caltime = new Date().toLocaleTimeString();
 const caldate = new Date().toLocaleDateString();
 
@@ -16,10 +20,7 @@ document.querySelector("#main").addEventListener("mouseleave", function (e) {
 
 
 
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('#main'),
-    smooth: true
-});
+
 
 
 
@@ -44,9 +45,9 @@ document.querySelectorAll('.elem').forEach((elem, index) => {
         minicircle.style.width = "45px";
         minicircle.innerHTML = "VIEW"
 
-
-        gsap.to(elem.querySelector('img'), {
-            opacity: 1, ease: Power3,
+        gsap.to(elem.querySelector('a'), {
+            opacity: 1,
+            ease: Power3,
             top: top_pos - "13vh",
             left: details.clientX - "150",
             rotate: gsap.utils.clamp(-15, 15, rot_val)
@@ -60,7 +61,7 @@ document.querySelectorAll('.elem').forEach((elem, index) => {
         gsap.to(elem.querySelector('h1'), { opacity: 0.8, scale: 1 })
         gsap.to(elem.querySelector('h5'), { opacity: 0.3, scale: 1 })
 
-        gsap.to(elem.querySelector('img'), {
+        gsap.to(elem.querySelector('a'), {
             opacity: 0, ease: Power1,
         })
     })
