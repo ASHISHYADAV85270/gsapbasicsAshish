@@ -1,3 +1,21 @@
+const caltime = new Date().toLocaleTimeString();
+const caldate = new Date().toLocaleDateString();
+
+document.querySelector('.time').innerHTML = `${caltime}`;
+document.querySelector('.date').innerHTML = `${caldate}`;
+
+
+
+
+document.querySelector("#main").addEventListener("mousemove", function (e) {
+    document.querySelector("#minicircle").style.opacity = 1;
+});
+document.querySelector("#main").addEventListener("mouseleave", function (e) {
+    document.querySelector("#minicircle").style.opacity = 1;
+});
+
+
+
 const scroll = new LocomotiveScroll({
     el: document.querySelector('#main'),
     smooth: true
@@ -7,35 +25,38 @@ const scroll = new LocomotiveScroll({
 
 // for controlling mini circle behind cursor
 window.addEventListener("mousemove", function (e) {
-    // console.log(e.clientX, e.clientY);
     document.querySelector("#minicircle").style.transform = `translate(${e.clientX}px,${e.clientY}px)`;
 });
+
 // image wala
 var rotate = 0;
 document.querySelectorAll('.elem').forEach((elem, index) => {
     elem.addEventListener("mousemove", function (details) {
         var top_pos = details.clientY - elem.getBoundingClientRect().top;  //to get distance of ele from top
-        console.log(top_pos);
+        // console.log(top_pos);
         // console.log(elem.getBoundingClientRect().top, details.clientY);
         var rot_val = details.clientX - rotate;
         rotate = details.clientX;
         gsap.to(elem.querySelector('h1'), { opacity: 0.3, scale: 1.2 })
-        gsap.to(elem.querySelector('h5'), { opacity: 0.3, scale: 1.5 })
+        gsap.to(elem.querySelector('h5'), { opacity: 0.3, scale: 1.5 });
+        var minicircle = document.getElementById('minicircle');
+        minicircle.style.height = "45px";
+        minicircle.style.width = "45px";
+        minicircle.innerHTML = "VIEW"
+
 
         gsap.to(elem.querySelector('img'), {
             opacity: 1, ease: Power3,
             top: top_pos - "13vh",
-            left: details.clientX,
+            left: details.clientX - "150",
             rotate: gsap.utils.clamp(-15, 15, rot_val)
         })
     })
-});
-
-
-
-
-document.querySelectorAll('.elem').forEach((elem, index) => {
     elem.addEventListener("mouseleave", function (details) {
+        var minicircle = document.getElementById('minicircle');
+        minicircle.style.height = "10px";
+        minicircle.style.width = "10px";
+        minicircle.innerHTML = ""
         gsap.to(elem.querySelector('h1'), { opacity: 0.8, scale: 1 })
         gsap.to(elem.querySelector('h5'), { opacity: 0.3, scale: 1 })
 
@@ -45,9 +66,20 @@ document.querySelectorAll('.elem').forEach((elem, index) => {
     })
 });
 
-
-
-
+const arrowcircle = document.querySelectorAll('.circle').forEach((circle, index) => {
+    circle.addEventListener("mouseenter", function () {
+        gsap.to(circle.querySelector('i'), {
+            transform: `translateY(+100%)`,
+            duration: 0.6,
+        });
+    })
+    circle.addEventListener("mouseleave", function () {
+        gsap.to(circle.querySelector('i'), {
+            transform: `translateY(0%)`,
+            duration: 0.4,
+        });
+    })
+});
 
 
 
